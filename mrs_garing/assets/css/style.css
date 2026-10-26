@@ -1,0 +1,192 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  font-family: arial;
+  background: #FFF8C5;
+}
+
+/* ===== HEADER ===== */
+header, .header{
+  background: #FFD60A;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #D90429;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.logo{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #D90429;
+  font-weight: bold;
+  font-size: 20px;
+}
+.logo-img{
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: white;
+  object-fit: cover;
+  border: 2px solid white;
+}
+nav a, .menu a{
+  color: black;
+  text-decoration: none;
+  font-size: 13px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+/* ===== BANNER ===== */
+.hero{
+  background: #D90429;
+  color: white;
+  text-align: center;
+  padding: 18px;
+}
+.hero span{
+  color: #FFD60A;
+}
+
+/* ===== PRODUK - FULL LAYAR LAPTOP + HP ===== */
+.container{
+  padding: 15px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+.produk-wrapper, .grid-produk{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  margin: 15px auto;
+}
+.card, .item{
+  background: white;
+  padding: 10px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+.card img, .item img{
+  width: 100%;
+  height: 120px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.card h4, .item .nama{
+  font-size: 13px;
+  margin: 6px 0;
+  min-height: 32px;
+}
+.harga{
+  color: #D90429;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 4px 0;
+}
+.btn-beli{
+  background: #D90429;
+  color: white;
+  font-size: 12px;
+  padding: 8px;
+  border-radius: 6px;
+  text-decoration: none;
+  display: block;
+  margin-top: auto;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+select{
+  width: 100%;
+  font-size: 12px;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin: 5px 0;
+}
+
+/* ===== KERANJANG FIX - TIDAK BERANTAKAN LAGI ===== */
+.keranjang-card{
+    background:white; 
+    max-width:650px; 
+    margin:30px auto;
+    border-radius:16px; 
+    overflow:hidden;
+    box-shadow:0 4px 20px rgba(0,0,0,0.15);
+    text-align: left;
+}
+.keranjang-header{
+    background:#D90429; 
+    color:white; 
+    padding:12px 18px;
+    display:flex; 
+    justify-content:space-between; 
+    align-items:center;
+    font-weight:bold;
+    font-size: 14px;
+}
+.keranjang-body{padding:12px 16px;}
+.cart-item{
+    display:flex; 
+    gap:12px; 
+    align-items:center;
+    border-bottom:1px dashed #eee; 
+    padding:12px 0;
+}
+.cart-item img{width:55px;height:55px;border-radius:8px;object-fit:cover;flex-shrink:0;}
+.cart-info{flex:1}
+.cart-info b{font-size:13px;display:block}
+.cart-info small{font-size:11px;color:#666}
+.cart-price{font-size:12px;color:#D90429;font-weight:bold;margin:3px 0}
+.cart-actions{
+    display:flex; 
+    align-items:center; 
+    justify-content:space-between;
+    margin-top:8px;
+}
+.qty-control{display:flex;align-items:center;gap:8px}
+.qty-control a{
+    background:#FFD60A; 
+    color:black; 
+    text-decoration:none;
+    width:26px;height:26px;
+    display:flex;justify-content:center;align-items:center;
+    border-radius:50%; 
+    font-weight:bold; 
+    font-size:16px;
+}
+.qty-control span{font-size:13px; font-weight:bold; min-width:20px; text-align:center;}
+.btn-hapus{
+    background:#ffe0e0; 
+    color:#D90429; 
+    font-size:11px; 
+    text-decoration:none;
+    padding:5px 12px; 
+    border-radius:20px; 
+    font-weight:bold;
+}
+.keranjang-footer{background:#FFF8C5; padding:14px 18px;}
+.total-row{display:flex; justify-content:space-between; font-weight:bold; font-size:15px; margin-bottom:10px;}
+.btn-wa{background:#25D366; color:white; padding:12px; display:block; text-align:center; text-decoration:none; border-radius:10px; font-weight:bold;}
+
+/* ===== RESPONSIVE HP + LAPTOP ===== */
+@media (max-width: 900px){
+  .produk-wrapper, .grid-produk{ grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 600px){
+  .produk-wrapper, .grid-produk{ grid-template-columns: repeat(2, 1fr); gap:10px; }
+  .card img, .item img{ height:90px; }
+  header, .header{ padding:10px; }
+}
